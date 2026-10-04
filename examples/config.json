@@ -1,0 +1,29 @@
+{
+  "property_table": {
+    "total_pressure_kpa": 101.325,
+    "temperatures_c": [0, 10, 20, 30, 40],
+    "saturation_pressures_kpa": [0.6112, 1.2281, 2.3392, 4.2460, 7.3849]
+  },
+  "schemes": [
+    {
+      "name": "two-stream-comfort",
+      "inlets": [
+        {"label": "cool-outdoor", "temperature_c": 10, "relative_humidity": 0.8, "dry_air_flow_kg_s": 1.0},
+        {"label": "warm-return", "temperature_c": 30, "relative_humidity": 0.4, "dry_air_flow_kg_s": 2.0}
+      ]
+    },
+    {
+      "name": "saturated-extremes",
+      "inlets": [
+        {"label": "cold", "temperature_c": 0, "relative_humidity": 1.0, "dry_air_flow_kg_s": 1.0},
+        {"label": "hot", "temperature_c": 40, "relative_humidity": 1.0, "dry_air_flow_kg_s": 1.0}
+      ]
+    },
+    {
+      "name": "bad-relative-humidity",
+      "inlets": [
+        {"temperature_c": 20, "relative_humidity": 1.3, "dry_air_flow_kg_s": 1.0}
+      ]
+    }
+  ]
+}

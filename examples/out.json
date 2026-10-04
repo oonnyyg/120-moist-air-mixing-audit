@@ -1,0 +1,91 @@
+{
+  "total_pressure_kpa": 101.325,
+  "table_range_c": [
+    0.0,
+    40.0
+  ],
+  "scheme_count": 3,
+  "schemes": [
+    {
+      "name": "two-stream-comfort",
+      "status": "valid",
+      "condensation_required": false,
+      "reason": null,
+      "mixed_state": {
+        "dry_air_flow_kg_s": 3.0,
+        "humidity_ratio_kg_per_kg_da": 0.009098345267246653,
+        "enthalpy_kj_per_kg_da": 46.660471137266065,
+        "temperature_c": 23.369805393095387,
+        "vapour_pressure_kpa": 1.460897799046351,
+        "saturation_pressure_kpa": 2.9817544923554284,
+        "relative_humidity": 0.48994570236811114
+      },
+      "residuals": {
+        "dry_air_flow_kg_s": 0.0,
+        "water_flow_kg_s": 0.0,
+        "enthalpy_flow_kw": 0.0
+      },
+      "inlets": [
+        {
+          "label": "cool-outdoor",
+          "temperature_c": 10.0,
+          "relative_humidity": 0.8,
+          "vapour_pressure_kpa": 0.98248,
+          "humidity_ratio_kg_per_kg_da": 0.006089627045443945,
+          "enthalpy_kj_per_kg_da": 25.40342430370056
+        },
+        {
+          "label": "warm-return",
+          "temperature_c": 30.0,
+          "relative_humidity": 0.4,
+          "vapour_pressure_kpa": 1.6984000000000004,
+          "humidity_ratio_kg_per_kg_da": 0.010602704378148007,
+          "enthalpy_kj_per_kg_da": 57.28899455404883
+        }
+      ]
+    },
+    {
+      "name": "saturated-extremes",
+      "status": "condensation_required",
+      "condensation_required": true,
+      "reason": "mixed state is above saturation; condensation treatment required",
+      "mixed_state": {
+        "dry_air_flow_kg_s": 2.0,
+        "humidity_ratio_kg_per_kg_da": 0.026333630974511888,
+        "enthalpy_kj_per_kg_da": 87.79922604248421,
+        "temperature_c": 20.795468599022445,
+        "vapour_pressure_kpa": 4.115907930639972,
+        "saturation_pressure_kpa": 2.4908799524616,
+        "relative_humidity": 1.652391126506296
+      },
+      "residuals": {
+        "dry_air_flow_kg_s": 0.0,
+        "water_flow_kg_s": 0.0,
+        "enthalpy_flow_kw": 0.0
+      },
+      "inlets": [
+        {
+          "label": "cold",
+          "temperature_c": 0.0,
+          "relative_humidity": 1.0,
+          "vapour_pressure_kpa": 0.6112,
+          "humidity_ratio_kg_per_kg_da": 0.0037743862707990358,
+          "enthalpy_kj_per_kg_da": 9.439740063268388
+        },
+        {
+          "label": "hot",
+          "temperature_c": 40.0,
+          "relative_humidity": 1.0,
+          "vapour_pressure_kpa": 7.3849,
+          "humidity_ratio_kg_per_kg_da": 0.04889287567822474,
+          "enthalpy_kj_per_kg_da": 166.1587120217
+        }
+      ]
+    },
+    {
+      "name": "bad-relative-humidity",
+      "status": "invalid",
+      "reason": "relative humidity 1.3 is outside [0, 1]"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "total_pressure_kpa": 101.325,
+  "saturation_table": {
+    "temperatures_c": [0.0, 5.0, 10.0, 15.0, 20.0, 25.0, 30.0, 35.0, 40.0],
+    "pressures_kpa": [0.611, 0.872, 1.228, 1.705, 2.339, 3.169, 4.246, 5.628, 7.384]
+  },
+  "schemes": [
+    {
+      "name": "office-reshuffle",
+      "inlets": [
+        {"name": "fresh", "temperature_c": 35.0, "relative_humidity": 0.6, "mass_flow_dry_kg_s": 0.8},
+        {"name": "return", "temperature_c": 24.0, "relative_humidity": 0.5, "mass_flow_dry_kg_s": 2.2}
+      ]
+    },
+    {
+      "name": "winter-fog-risk",
+      "inlets": [
+        {"name": "warm-humid", "temperature_c": 30.0, "relative_humidity": 1.0, "mass_flow_dry_kg_s": 1.0},
+        {"name": "cold", "temperature_c": 2.0, "relative_humidity": 1.0, "mass_flow_dry_kg_s": 1.0}
+      ]
+    },
+    {
+      "name": "bad-input-demo",
+      "inlets": [
+        {"name": "oops", "temperature_c": 20.0, "relative_humidity": 1.4, "mass_flow_dry_kg_s": 1.0},
+        {"name": "fine", "temperature_c": 20.0, "relative_humidity": 0.5, "mass_flow_dry_kg_s": 1.0}
+      ]
+    }
+  ]
+}
